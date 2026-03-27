@@ -64,17 +64,98 @@ var isWindowOpen:Boolean = false
  * -when....
  * */
 
+//functions 
+//loops
+//statements & expressions
+
+/**FUNCTIONS
+ * -DOES one core task (fetch data format text etc)
+ * types
+ * -parametirized
+ * -non parametirized
+ * 
+ * parts
+ * -key word
+ * - function name
+ * -parenthesis
+ * -data type(use this when you are ruturning a value)
+ * -curly braces
+
+
+ **/
+// parametirized function(the parameters are automatically set to constants)
+fun greetings(){
+    println("Hello welcome to safari lab")
+}
+
+fun afternoonGreeting(){
+    println("Good afternoon")
+}
+
+fun getthesumofNUmbers(num1:Int ,num2:Int){
+    println(num1+num2)
+}
+
+fun condition(i:Int) =i<10
+fun addOperator(num1:Int , num2:Int):Int{
+    return num1 +num2
+}
+
+fun multiplyOperator(num1:Int,num2:Float){
+    println(num1 * num2)
+}
+
+// fun toogleLights(lightsOn:String){
+//     if (lightsOn =="ON"){
+//     println()}
+// }
 
 
 
+/**
+ * LOOPS
+ * -while
+ * -do ...while
+ * -for...in 
+ * 
+ * 
+ * parts
+ * -statements
+ * -conditions
+ * */
+ 
+ var start:Int =0
+var fruits= listOf("apple","orange","banana")
 
-
-
-
+var num:Int=0
 
 
 
 fun main() {
+//     greetings()//calling the function
+//     while (start<20){
+//         println(start)
+//         start++
+        
+//     }
+    
+    do {
+        println("Hello world #$start")
+        start+=1
+    } while(start<=10)//then checks the condition
+    
+   for(fruit in fruits){
+         print(fruit)
+    }
+
+     
+    for (number in 1 until 10){
+        print("$number")
+    }
+    for (number in 10 downTo -10){
+        print("$number")
+    }
+
     firstName ="martin luther"
     
 
@@ -116,11 +197,17 @@ age =50
        }
     
 // println(output)
+println("===================================")
 
+ afternoonGreeting()
+ getthesumofNUmbers(15,20)
+ if(condition(10)){
+     println("this is 10")
+ }else{
+     println("Opps this is not ten")
+ }
+ 
+ println(addOperator(10 ,12))
+ println(multiplyOperator(12 ,32.33f))
 
 }
-
-
-
-
- 
