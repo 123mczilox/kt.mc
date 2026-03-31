@@ -1,3 +1,4 @@
+//Zidane Mczilox, Safari Lab
 var studentname: String = "Alex morgan"//mutable variable
 val studentId: Int = 2024001//immutable variable
 var GPA: Double = 3.75//mutable variable
@@ -39,11 +40,56 @@ fun getGrade(score:Int):String{
 //  }
 fun isEven(i:Int):Boolean = i % 5 ==0
 
+val students = listOf(
+"Alice" to 85,
+"Bob" to 42,
+"Charlie" to 67,
+"Diana" to 91,
+"Ethan" to 38
+)
+val sumOfScore = 85+42+67+91+38
+
+fun displayAllStudents(){
+    for ((name , score) in students)
+    println("$name, $score")
+}
+fun getAverageScore():Double{
+    val total = students.sumOf { it.second }//score in each pair
+    val average = total.toDouble() / students.size
+    //total.toDouble -converts the total to a decimal number to avoid integer didvision
+    return average
+}
+
+
+fun findTopStudent():String{
+    val top = students.maxByOrNull {it.second}
+    //maxbynull {it.second}-it finds the pair with the highest score
+    
+    return top?.first ?: "No students"
+    //top?.first -it gets the name of the top student
+    // ?: "No students" incase the list us empty avoid errors (safe fallback)
+    
+}
+
+fun classifyStudents() {
+    println("Student classifications:")
+    for ((name, score) in students) {
+        val grade = getGrade(score)
+        println("Name: $name, Score: $score, Grade: $grade")
+    }
+}
+    
 
  
 
 
 fun main(){
+   displayAllStudents()                               
+    println("\nAverage score: ${getAverageScore()}")   
+    println("Top student: ${findTopStudent()}")       
+    println()
+    classifyStudents()  
+    println("==========================")
   println("Student : $studentname $middleInitial.($studentId) has GPA $GPA, and Is Enrolled: $isEnrolled")
 var phoneNumber:String? = null
     println(phoneNumber)
@@ -76,6 +122,126 @@ var phoneNumber:String? = null
     }
 
     println("Temperature is $Temperature°C")
+ println("===============================")
+    
+// var dayOfWeek = "Monday"
+// if (dayOfWeek == "Saturday" || dayOfWeek == "Sunday") {
+// println("Weekend! Time to relax")
+// } else if (dayOfWeek == "Monday") {
+// println("Back to work")
+// } else if (dayOfWeek == "Friday") {
+// println("TGIF!")
+// } else {
+// println("Regular weekday")
+// }
+var dayOfWeek = "thursday"
+when (dayOfWeek){
+    "Saturday","Sunday" -> println("Weekend! time to relax")
+    "Monday" -> println("Back to work")
+    "Friday" -> println("Begining of Weekend")
+    else -> println("Regular weekday")
+}
 
+var trafficLight ="Yellow"
+var trafficAction=
+    when (trafficLight){
+        "Red" -> println("Stop!")
+        "Yellow" -> println("Caution")
+         "Green" -> println("Go")
+          else -> println("Invalid")
+    }
+
+   
+println("===============================")
+//TASK 4.1
+
+// var number:Int =1
+//     while (number <=10){
+//         println(number)
+//         number++
+//     }
+    println("===============")
+    
+var number = 5
+
+do {
+    println(number)
+    number--
+} while (number >= 1)
+
+println("Blast off!")
+
+// we add withIndex so that when the value runs it is assigned an idex value.eg
+/**
+ var students = listOf("JOHN","LUCAS","LILY","MARY")
+ for ((index,student)in students.withIndex()){
+ 
+     println("[${index+1}].$student")
+  }
+ **/ 
+
+
+
+val shoppingList = listOf("Milk","Eggs","Bread","Butter","coffee")
+
+for ((index,shopping) in shoppingList.withIndex()){
+    println("[${index +1}]. $shopping")
+}
+
+for (i in 1..20){
+    println(i)
+}
+println("===============================")
+
+for (i in 1 until 20){
+    println(i)
+}
+println("===============================")
+
+for (i in 2..20 step 2){
+    println(i)
     
 }
+
+for (ch in 'A'..'Z'){
+    println(ch)
+}
+
+// A statement is a code that perfoms an action but does not return a vale.eg
+println("My name is Mczilox Zidane")
+//this it does the action of giving out my name.
+//While a expression is a line of code that claculates or ruturns a value.eg
+
+val sum = 12+30
+    println(sum)
+var age = 13    
+var status = ""
+if (age >= 18) {
+status = "Adult"
+} else {
+status = "Minor"
+}
+println("The user is a $status")
+
+val a = 10
+val b = 25
+
+val maxNumber = when {
+    a > b -> a
+    else -> b
+}
+
+println(maxNumber)
+println("======================")
+
+                               
+}
+
+
+
+
+
+    
+
+    
+
