@@ -1,10 +1,13 @@
 //Zidane Mczilox, Safari Lab
+// TASK 1.1
 var studentname: String = "Alex morgan"//mutable variable
 val studentId: Int = 2024001//immutable variable
 var GPA: Double = 3.75//mutable variable
 val isEnrolled: Boolean = true//immutable variable
 var middleInitial: Char = 'j'//mutable variable
 
+//SECTION 2
+//TASK 2.1
 fun displayMenu(){
     println("1. view Profile ")
     println("2. Edit Settings ")
@@ -13,12 +16,13 @@ fun displayMenu(){
 // var price:Double = 323.232356766
 // var discontPercent:Double = 12.33333333334375485
 
+//TASK 2.2
 fun calculateDiscount(price:Double, discountPercent:Double):Double{
     return(price-(price*discountPercent/100))
     
 }
 
-
+//TASK 2.3
 fun getGrade(score:Int):String{
     return if (score >= 80) {
         "A"
@@ -38,9 +42,12 @@ fun getGrade(score:Int):String{
 //      return if(Number=even){'True'
 //      }else{'Odd'}
 //  }
+
+//TASK 2.4
 fun isEven(i:Int):Boolean = i % 5 ==0
 
-val students = listOf(
+//SECTION 6
+val students = mapOf(
 "Alice" to 85,
 "Bob" to 42,
 "Charlie" to 67,
@@ -110,7 +117,7 @@ var phoneNumber:String? = null
       }else{("$num is odd")}
       
   }
-
+//TASK 3.1
     var Temperature: Int = 20
 
     if (Temperature > 30) {
@@ -134,6 +141,8 @@ var phoneNumber:String? = null
 // } else {
 // println("Regular weekday")
 // }
+
+//TASK 3.2
 var dayOfWeek = "thursday"
 when (dayOfWeek){
     "Saturday","Sunday" -> println("Weekend! time to relax")
@@ -142,6 +151,8 @@ when (dayOfWeek){
     else -> println("Regular weekday")
 }
 
+
+//TASK 3.3
 var trafficLight ="Yellow"
 var trafficAction=
     when (trafficLight){
@@ -161,7 +172,7 @@ println("===============================")
 //         number++
 //     }
     println("===============")
-    
+    //TASK 4.2
 var number = 5
 
 do {
@@ -181,12 +192,13 @@ println("Blast off!")
  **/ 
 
 
-
+//TASK 4.3
 val shoppingList = listOf("Milk","Eggs","Bread","Butter","coffee")
 
 for ((index,shopping) in shoppingList.withIndex()){
     println("[${index +1}]. $shopping")
 }
+//TASK 4.4
 
 for (i in 1..20){
     println(i)
@@ -206,7 +218,7 @@ for (i in 2..20 step 2){
 for (ch in 'A'..'Z'){
     println(ch)
 }
-
+//TASK 5.1
 // A statement is a code that perfoms an action but does not return a vale.eg
 println("My name is Mczilox Zidane")
 //this it does the action of giving out my name.
@@ -214,6 +226,8 @@ println("My name is Mczilox Zidane")
 
 val sum = 12+30
     println(sum)
+
+    //TASK 5.2
 var age = 13    
 var status = ""
 if (age >= 18) {
@@ -223,6 +237,8 @@ status = "Minor"
 }
 println("The user is a $status")
 
+
+//TASK 5.3
 val a = 10
 val b = 25
 
